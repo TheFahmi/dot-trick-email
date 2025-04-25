@@ -2,7 +2,7 @@
 
 A modern web application that generates all possible Gmail dot trick variations from a single Gmail address.
 
-![Dot Trik Gmail](public/hero-image.svg)
+![Dot Trik Gmail](public/generator-illustration.svg)
 
 ## Features
 
