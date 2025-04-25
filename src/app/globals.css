@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9fa;
+  --foreground: #171717;
+  --primary: #4285f4;
+  --secondary: #34a853;
+  --accent: #ea4335;
+  --accent-2: #fbbc05;
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --navbar-transparent-bg: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --foreground: #ededed;
+    --glass-bg: rgba(20, 20, 20, 0.25);
+    --glass-border: rgba(80, 80, 80, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --navbar-bg: rgba(20, 20, 20, 0.8);
+    --navbar-transparent-bg: rgba(20, 20, 20, 0.1);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(66, 133, 244, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 90% 30%, rgba(52, 168, 83, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(234, 67, 53, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 20% 70%, rgba(251, 188, 5, 0.15) 0%, transparent 30%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Add cursor pointer to all buttons and interactive elements */
+button, 
+a, 
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.btn-primary,
+.btn-secondary {
+  cursor: pointer;
+}
+
+@layer utilities {
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 10px;
+  }
+
+  .glass-card {
+    @apply p-6 transition-all duration-300 hover:shadow-lg;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 10px;
+  }
+  
+  .navbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .navbar-scrolled {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .navbar-transparent {
+    background: var(--navbar-transparent-bg);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.btn-primary {
+  @apply bg-[var(--primary)] text-white font-medium py-2 px-4 rounded-full transition-all hover:shadow-md hover:opacity-90;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-[var(--primary)] text-[var(--primary)] font-medium py-2 px-4 rounded-full transition-all hover:shadow-md hover:bg-[var(--primary)]/10;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)];
+}
+
+.section {
+  @apply py-12 md:py-20;
+}

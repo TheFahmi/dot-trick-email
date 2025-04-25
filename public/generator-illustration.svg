@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#f8f9fa" rx="10" ry="10" opacity="0.5" />
+  
+  <!-- Generator UI -->
+  <rect x="50" y="50" width="500" height="200" rx="10" ry="10" fill="white" opacity="0.7" stroke="#e0e0e0" stroke-width="2" />
+  
+  <!-- Input Field -->
+  <rect x="70" y="80" width="350" height="40" rx="20" ry="20" fill="#f1f3f4" />
+  <text x="90" y="105" font-family="Arial, sans-serif" font-size="14" fill="#5f6368">johndoe@gmail.com</text>
+  
+  <!-- Generate Button -->
+  <rect x="430" y="80" width="100" height="40" rx="20" ry="20" fill="#4285f4" />
+  <text x="450" y="105" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Generate</text>
+  
+  <!-- Results -->
+  <rect x="70" y="140" width="460" height="90" rx="5" ry="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1" />
+  
+  <!-- Result Items -->
+  <g transform="translate(90, 160)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#202124">johndoe@gmail.com</text>
+    <rect x="350" y="-5" width="60" height="20" rx="10" ry="10" fill="#4285f4" opacity="0.1" />
+    <text x="365" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4285f4" font-weight="bold">Copy</text>
+  </g>
+  
+  <g transform="translate(90, 190)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#202124">john.doe@gmail.com</text>
+    <rect x="350" y="-5" width="60" height="20" rx="10" ry="10" fill="#4285f4" opacity="0.1" />
+    <text x="365" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4285f4" font-weight="bold">Copy</text>
+  </g>
+  
+  <g transform="translate(90, 220)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#202124">j.ohndoe@gmail.com</text>
+    <rect x="350" y="-5" width="60" height="20" rx="10" ry="10" fill="#4285f4" opacity="0.1" />
+    <text x="365" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4285f4" font-weight="bold">Copy</text>
+  </g>
+  
+  <!-- Dots Animation -->
+  <circle cx="150" cy="40" r="5" fill="#4285f4">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="180" cy="40" r="5" fill="#ea4335">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" begin="0.3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="210" cy="40" r="5" fill="#fbbc05">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" begin="0.6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="240" cy="40" r="5" fill="#34a853">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" begin="0.9s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Gmail Logo Colors -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="125" height="4" fill="#4285F4" />
+    <rect x="125" y="0" width="125" height="4" fill="#EA4335" />
+    <rect x="250" y="0" width="125" height="4" fill="#FBBC05" />
+    <rect x="375" y="0" width="125" height="4" fill="#34A853" />
+  </g>
+</svg>
